@@ -1,0 +1,13 @@
+{
+  "name": "portifolio-site",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*.*",
+    "grunt-contrib-clean": "*.*",
+    "grunt-contrib-copy": "*.*",
+    "grunt-mkdir": "*.*",
+    "grunt-responsive-images": "*.*",
+    "node": "^12.2.0"
+  }
+}
