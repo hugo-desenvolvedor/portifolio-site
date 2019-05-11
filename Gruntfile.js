@@ -13,16 +13,21 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     engine: 'im',
-                    sizes: [{
-                        width: 1600,
-                        suffix: '_large_2x',
-                        quality: 30
-                    }]
+                    sizes: [
+                        {
+                            width: 1600,
+                            quality: 80
+                        },
+                        {
+                            width: 880,
+                            quality: 80
+                        }
+                    ]
                 },
                 files: [{
                     expand: true,
-                    src: ['*.{gif,jpg,png}'],
-                    cwd: 'images_src/',
+                    src: ['**/*.{gif,jpg,png}'],
+                    cwd: 'images-src/',
                     dest: 'images/'
                 }]
             }
@@ -49,7 +54,7 @@ module.exports = function(grunt) {
             dev: {
                 files: [{
                     expand: true,
-                    src: ['images_src/fixed/*.{gif,jpg,png}'],
+                    src: ['images-src/fixed/*.{gif,jpg,png}'],
                     dest: 'images/',
                     flatten: true,
                 }]
@@ -63,5 +68,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-mkdir');
     grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
-
 };
