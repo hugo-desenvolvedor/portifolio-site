@@ -1,0 +1,103 @@
+/**
+* Mobile First
+*/
+body {
+    font-family: "Montserrat";
+    margin: 0 auto;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+header picture img {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #7d97ad;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    height: 64px;
+}
+
+.name, .position {
+    color: #2d3c49;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.position {
+    font-size: 1.2em;
+}
+
+.logo {
+    background: url("./../svg/udacity.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100%;
+}
+
+.description {
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.image-gallery img {
+    width: 100%;
+}
+
+picture figcaption {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+picture figcaption h3 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+article h2 {
+    color: #7d97ad;
+}
+
+@media screen and (min-width: 480px) {
+    .gallery {
+        display: flex;
+
+    }
+
+    .image-gallery {
+        width: calc(100% / 3);
+        margin-right: 10px;
+    }
+
+    .image-gallery:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        margin: 0 auto;
+    }
+    .name {
+        font-size: 2.5em;
+    }
+
+    .position {
+        font-size: 1em;
+    }
+
+    body {
+        width: 960px;
+    }
+}

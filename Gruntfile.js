@@ -7,7 +7,6 @@
 */
 
 module.exports = function(grunt) {
-
     grunt.initConfig({
         responsive_images: {
             dev: {
@@ -15,12 +14,16 @@ module.exports = function(grunt) {
                     engine: 'im',
                     sizes: [
                         {
-                            width: 1600,
-                            quality: 80
+                            width: 960,
+                            quality: 50
                         },
                         {
-                            width: 880,
-                            quality: 80
+                            width: 480,
+                            quality: 50
+                        },
+                        {
+                            width: 320,
+                            quality: 50
                         }
                     ]
                 },
@@ -49,7 +52,7 @@ module.exports = function(grunt) {
             },
         },
 
-        /* Copy the "fixed" images that don't go through processing into the images/directory */
+        /* Copy the "svg" images that don't go through processing into the images/directory */
         copy: {
             dev: {
                 files: [{
@@ -59,8 +62,12 @@ module.exports = function(grunt) {
                     flatten: true,
                 }]
             },
-        },
-
+            images: {
+                files: {
+                    'src-images/svg/udacity.svg': 'images/svg/udacity.svg'
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-responsive-images');
